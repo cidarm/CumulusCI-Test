@@ -104,6 +104,62 @@ flows:
                     seconds: 1
                     task_name: ordered_step
 
+    slow_steps_flow_bad:
+        description: A flow that slowly goes step by step, but fails at step two.
+        steps:
+            1:
+                task: named_sleep
+                options:
+                    seconds: 5
+                    task_name: quick_task
+            2:
+                task: named_sleep
+                options:
+                    seconds: 10
+                    task_name: slow_task
+                    status_code: error
+                    msg: You never expected this to work, did you?
+            3:
+                task: named_sleep
+                options:
+                    seconds: 7
+                    task_name: medium_task
+            4:
+                task: named_sleep
+                options:
+                    seconds: 1
+                    task_name: relationships
+            5:
+                task: named_sleep
+                options:
+                    seconds: 1
+                    task_name: affiliations
+            6:
+                task: named_sleep
+                options:
+                    seconds: 1
+                    task_name: update_admin_profile
+            7:
+                task: named_sleep
+                options:
+                    seconds: 1
+                    task_name: install_managed
+            8:
+                task: named_sleep
+                options:
+                    seconds: 1
+                    task_name: deploy_pre
+            9:
+                task: named_sleep
+                options:
+                    seconds: 1
+                    task_name: deploy_post
+            10:
+                task: named_sleep
+                options:
+                    seconds: 1
+                    task_name: ordered_step
+
     slow_steps_preflight_good:
         description: A passing preflight for the slow_steps_flow.
         steps:
