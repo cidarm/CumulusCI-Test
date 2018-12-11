@@ -1,5 +1,6 @@
 from cumulusci.core.tasks import BaseTask
 from cumulusci.tasks.util import Sleep
+from cumulusci.core.exceptions import SalesforceException
 
 
 class ExampleTask(BaseTask):
@@ -45,6 +46,10 @@ class StaticSleep(Sleep):
         self.name = self.options.get("task_name")
 
     def _run_task(self):
-        self.return_values["status_code"] = self.options.get("status_code", "ok")
+        status_code = self.options.get("status_code", "ok")
+        msg = self.options.get("msg", "")
+        self.return_values["status_code"] = status_code
+        self.return_values["msg"] = msg
         self.return_values["task_name"] = self.options.get("task_name")
-        self.return_values["msg"] = self.options.get("msg", "")
+        if status_code == "error":
+            raise SalesforceException(msg)
