@@ -46,6 +46,7 @@ class StaticSleep(Sleep):
         self.name = self.options.get("task_name")
 
     def _run_task(self):
+        super()._run_task()
         status_code = self.options.get("status_code", "ok")
         msg = self.options.get("msg", "")
         self.return_values["status_code"] = status_code
