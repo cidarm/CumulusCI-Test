@@ -1,10 +1,11 @@
 {
+  "orgName": "CidTest - Dev Org",
   "edition": "Developer",
-  "orgName": "CumulusCI-Test Dev Workspace", 
-  "orgPreferences": {
-    "enabled": [
-      "ChatterEnabled", 
-      "S1DesktopEnabled"
-    ]
+  "settings": {
+    "orgPreferenceSettings": {
+      "s1DesktopEnabled": true
+      , "chatterEnabled": true
+      , "translation": true 
+    }
   }
 }

@@ -1,11 +1,11 @@
 {
-  "edition": "Developer", 
-   "instance": "CS46",
-  "orgName": "CumulusCI-Test Feature Test Org", 
-  "orgPreferences": {
-    "enabled": [
-      "ChatterEnabled", 
-      "S1DesktopEnabled"
-    ]
+  "orgName": "CidTest - Feature Test Org",
+  "edition": "Developer",
+  "settings": {
+    "orgPreferenceSettings": {
+      "s1DesktopEnabled": true
+      , "chatterEnabled": true
+      , "translation": true 
+    }
   }
 }

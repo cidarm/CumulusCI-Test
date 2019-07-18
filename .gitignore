@@ -1,3 +1,23 @@
+# Salesforce / SFDX / CCI
+.cci
+.sfdx
+/src.orig
+/src
+
+# Python
 *.pyc
-/browser_tests
-/test_results.xml
+__pycache__
+
+# Robot Framework results
+robot/CCI/results/
+
+# Editors
+*.sublime-project
+*.sublime-workspace
+.vscode
+.idea
+.project
+.settings
+
+# Misc
+.DS_Store
