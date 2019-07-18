@@ -16,6 +16,10 @@
                 <behavior>Edit</behavior>
                 <field>Sample_Field__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Test1Auto__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
