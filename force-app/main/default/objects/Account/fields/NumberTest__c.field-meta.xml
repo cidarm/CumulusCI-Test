@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NumberTest__c</fullName>
+    <description>Test field used for sfdx test.</description>
+    <displayFormat>P-{0000}</displayFormat>
+    <externalId>false</externalId>
+    <label>NumberTest</label>
+    <type>AutoNumber</type>
+</CustomField>
